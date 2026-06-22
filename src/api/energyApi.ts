@@ -1,6 +1,6 @@
 import type { ChargingWindow, DailyEnergyMix } from "../types/energy";
 
-const API_URL = "http://localhost:8080/api";
+const API_URL = "https://syproback.onrender.com/api";
 
 export async function getEnergyMix(): Promise<DailyEnergyMix[]> {
   const response = await fetch(`${API_URL}/energy-mix`);
