@@ -52,7 +52,15 @@ export default function EnergyPieChart({ data }: Props) {
             ))}
           </Pie>
 
-          <Tooltip formatter={(value: number) => `${value.toFixed(2)}%`} />
+          <Tooltip
+            formatter={(value) => {
+              if (typeof value === "number") {
+                return `${value.toFixed(2)}%`;
+              }
+
+              return `${value}%`;
+            }}
+          />
           <Legend />
         </PieChart>
       </ResponsiveContainer>
