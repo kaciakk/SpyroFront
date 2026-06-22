@@ -1,0 +1,87 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f4f6f8;
+  color: #222;
+}
+
+.app {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 32px;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.charts-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.chart-card,
+.result-card,
+.charging-section {
+  background: white;
+  border-radius: 12px;
+  padding: 24px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.chart-card h2 {
+  text-align: center;
+}
+
+.clean-energy {
+  text-align: center;
+  font-weight: bold;
+  color: #008060;
+}
+
+.charging-section {
+  margin-top: 32px;
+}
+
+.charging-form {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.charging-form input {
+  margin-left: 8px;
+  padding: 8px;
+  width: 80px;
+}
+
+button {
+  padding: 10px 18px;
+  border: none;
+  background: #0088fe;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+button:disabled {
+  background: #999;
+}
+
+.error {
+  color: crimson;
+  font-weight: bold;
+}
+
+.result-card {
+  margin-top: 20px;
+}
+
+@media (max-width: 900px) {
+  .charts-grid {
+    grid-template-columns: 1fr;
+  }
+}
